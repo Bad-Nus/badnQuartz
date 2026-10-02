@@ -3,6 +3,8 @@ name: Deploy Quartz site to GitHub Pages
 on:
   push:
     branches: [v5]
+  schedule:
+    - cron: '0 3 * * *'   # 每天凌晨3点自动跑
   workflow_dispatch:
 
 permissions:
