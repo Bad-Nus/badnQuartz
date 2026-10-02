@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: badnquartz.zhl20090128.workers.dev
+  baseUrl: bad-nus.github.io/badnQuartz
   ignorePatterns:
     - private
     - templates

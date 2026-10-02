@@ -1,10 +1,8 @@
-name: Deploy Quartz site to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [v5]
-  schedule:
-    - cron: '0 3 * * *'   # 每天凌晨3点自动跑
   workflow_dispatch:
 
 permissions:
@@ -41,6 +39,10 @@ jobs:
 
       - name: Install Quartz plugins
         run: npx quartz plugin install --from-config
+
+      - name: Set baseUrl for GitHub Pages
+        run: |
+          sed -i 's|^  baseUrl:.*|  baseUrl: bad-nus.github.io/badnQuartz|' quartz.config.yaml
 
       - name: Build Quartz
         run: npx quartz build
