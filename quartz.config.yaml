@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: badnquartz.pages.dev
+  baseUrl: badnquartz.zhl20090128.workers.dev
   ignorePatterns:
     - private
     - templates
